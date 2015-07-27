@@ -673,7 +673,7 @@
                 // update cacheDict.collection
                 local.utility2.onReady.counter += 1;
                 local.utility2.taskRunOrSubscribe({
-                    key: 'swagger-mongodb.mongodbConnect'
+                    key: 'kz-noon.mongodbConnect'
                 }, function () {
                     local.swmg.collectionCreate(schema, local.utility2.onReady);
                 });
@@ -1055,7 +1055,7 @@
 
     // run browser js-env code
     case 'browser':
-        // export swagger-mongodb
+        // export kz-noon
         window.swmg = local.swmg;
         // require modules
         local.utility2 = window.utility2;
@@ -1065,7 +1065,7 @@
 
     // run node js-env code
     case 'node':
-        // export swagger-mongodb
+        // export kz-noon
         module.exports = local.swmg;
         module.exports.__dirname = __dirname;
         // require modules
@@ -1122,8 +1122,8 @@
                 Undefined: {}
             },
             info: {
-                description: 'demo of swagger-mongodb crud-api',
-                title: 'swagger-mongodb api',
+                description: 'demo of kz-noon crud-api',
+                title: 'kz-noon api',
                 version: '0'
             },
             paths: {},
@@ -1165,11 +1165,11 @@
             } } }
         };
         // init assets
-        local.utility2.cacheDict.assets['/assets/swagger-mongodb.js'] =
+        local.utility2.cacheDict.assets['/assets/kz-noon.js'] =
             local.utility2.istanbul_lite.instrumentInPackage(
                 local.fs.readFileSync(__filename, 'utf8'),
                 __filename,
-                'swagger-mongodb'
+                'kz-noon'
             );
         local.utility2.cacheDict.assets['/assets/swagger-ui.html'] = local.fs
             .readFileSync(
@@ -1181,7 +1181,7 @@
                 "<script src='swagger-ui.rollup.js' type='text/javascript'></script>",
                 "<script src='swagger-ui.rollup.js' type='text/javascript'></script>" +
                     '<script src="/assets/utility2.js"></script>' +
-                    '<script src="/assets/swagger-mongodb.js"></script>'
+                    '<script src="/assets/kz-noon.js"></script>'
             )
             // swagger-hack - update swagger.json url
             .replace(
@@ -1338,7 +1338,7 @@
         local.utility2 = local.modeJs === 'browser'
             ? window.utility2
             : require('utility2');
-        // init swagger-mongodb
+        // init kz-noon
         local.swmg = {
             cacheDict: {
                 collection: {},

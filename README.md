@@ -1,26 +1,26 @@
-swagger-mongodb
+kz-noon
 ===============
 lightweight swagger-ui crud-api backed by mongodb
 
-[![NPM](https://img.shields.io/npm/v/swagger-mongodb.svg?style=flat-square)](https://www.npmjs.org/package/swagger-mongodb)
+[![NPM](https://img.shields.io/npm/v/kz-noon.svg?style=flat-square)](https://www.npmjs.org/package/kz-noon)
 
 
 
 # live test-server
-[![heroku.com test-server](https://kaizhu256.github.io/node-swagger-mongodb/build/screen-capture.herokuDeploy.slimerjs..png)](https://hrku01-swagger-mongodb-beta.herokuapp.com)
+[![heroku.com test-server](https://kaizhu256.github.io/node-kz-noon/build/screen-capture.herokuDeploy.slimerjs..png)](https://hrku01-kz-noon-beta.herokuapp.com)
 
 
 
-# build-status [![travis-ci.org build-status](https://api.travis-ci.org/kaizhu256/node-swagger-mongodb.svg)](https://travis-ci.org/kaizhu256/node-swagger-mongodb)
+# build-status [![travis-ci.org build-status](https://api.travis-ci.org/kaizhu256/node-kz-noon.svg)](https://travis-ci.org/kaizhu256/node-kz-noon)
 
-[![build commit status](https://kaizhu256.github.io/node-swagger-mongodb/build/build.badge.svg)](https://travis-ci.org/kaizhu256/node-swagger-mongodb)
+[![build commit status](https://kaizhu256.github.io/node-kz-noon/build/build.badge.svg)](https://travis-ci.org/kaizhu256/node-kz-noon)
 
-| git-branch : | [master](https://github.com/kaizhu256/node-swagger-mongodb/tree/master) | [beta](https://github.com/kaizhu256/node-swagger-mongodb/tree/beta) | [alpha](https://github.com/kaizhu256/node-swagger-mongodb/tree/alpha)|
+| git-branch : | [master](https://github.com/kaizhu256/node-kz-noon/tree/master) | [beta](https://github.com/kaizhu256/node-kz-noon/tree/beta) | [alpha](https://github.com/kaizhu256/node-kz-noon/tree/alpha)|
 |--:|:--|:--|:--|
-| test-server : | [![heroku.com test-server](https://kaizhu256.github.io/node-swagger-mongodb/heroku-logo.75x25.png)](https://hrku01-swagger-mongodb-master.herokuapp.com) | [![heroku.com test-server](https://kaizhu256.github.io/node-swagger-mongodb/heroku-logo.75x25.png)](https://hrku01-swagger-mongodb-beta.herokuapp.com) | [![heroku.com test-server](https://kaizhu256.github.io/node-swagger-mongodb/heroku-logo.75x25.png)](https://hrku01-swagger-mongodb-alpha.herokuapp.com)|
-| test-report : | [![test-report](https://kaizhu256.github.io/node-swagger-mongodb/build..master..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-swagger-mongodb/build..master..travis-ci.org/test-report.html) | [![test-report](https://kaizhu256.github.io/node-swagger-mongodb/build..beta..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-swagger-mongodb/build..beta..travis-ci.org/test-report.html) | [![test-report](https://kaizhu256.github.io/node-swagger-mongodb/build..alpha..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-swagger-mongodb/build..alpha..travis-ci.org/test-report.html)|
-| coverage : | [![istanbul-lite coverage](https://kaizhu256.github.io/node-swagger-mongodb/build..master..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-swagger-mongodb/build..master..travis-ci.org/coverage.html/index.html) | [![istanbul-lite coverage](https://kaizhu256.github.io/node-swagger-mongodb/build..beta..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-swagger-mongodb/build..beta..travis-ci.org/coverage.html/index.html) | [![istanbul-lite coverage](https://kaizhu256.github.io/node-swagger-mongodb/build..alpha..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-swagger-mongodb/build..alpha..travis-ci.org/coverage.html/index.html)|
-| build-artifacts : | [![build-artifacts](https://kaizhu256.github.io/node-swagger-mongodb/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-swagger-mongodb/tree/gh-pages/build..master..travis-ci.org) | [![build-artifacts](https://kaizhu256.github.io/node-swagger-mongodb/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-swagger-mongodb/tree/gh-pages/build..beta..travis-ci.org) | [![build-artifacts](https://kaizhu256.github.io/node-swagger-mongodb/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-swagger-mongodb/tree/gh-pages/build..alpha..travis-ci.org)|
+| test-server : | [![heroku.com test-server](https://kaizhu256.github.io/node-kz-noon/heroku-logo.75x25.png)](https://hrku01-kz-noon-master.herokuapp.com) | [![heroku.com test-server](https://kaizhu256.github.io/node-kz-noon/heroku-logo.75x25.png)](https://hrku01-kz-noon-beta.herokuapp.com) | [![heroku.com test-server](https://kaizhu256.github.io/node-kz-noon/heroku-logo.75x25.png)](https://hrku01-kz-noon-alpha.herokuapp.com)|
+| test-report : | [![test-report](https://kaizhu256.github.io/node-kz-noon/build..master..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..master..travis-ci.org/test-report.html) | [![test-report](https://kaizhu256.github.io/node-kz-noon/build..beta..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..beta..travis-ci.org/test-report.html) | [![test-report](https://kaizhu256.github.io/node-kz-noon/build..alpha..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..alpha..travis-ci.org/test-report.html)|
+| coverage : | [![istanbul-lite coverage](https://kaizhu256.github.io/node-kz-noon/build..master..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..master..travis-ci.org/coverage.html/index.html) | [![istanbul-lite coverage](https://kaizhu256.github.io/node-kz-noon/build..beta..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..beta..travis-ci.org/coverage.html/index.html) | [![istanbul-lite coverage](https://kaizhu256.github.io/node-kz-noon/build..alpha..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..alpha..travis-ci.org/coverage.html/index.html)|
+| build-artifacts : | [![build-artifacts](https://kaizhu256.github.io/node-kz-noon/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-kz-noon/tree/gh-pages/build..master..travis-ci.org) | [![build-artifacts](https://kaizhu256.github.io/node-kz-noon/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-kz-noon/tree/gh-pages/build..beta..travis-ci.org) | [![build-artifacts](https://kaizhu256.github.io/node-kz-noon/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-kz-noon/tree/gh-pages/build..alpha..travis-ci.org)|
 
 #### master branch
 - stable branch
@@ -52,7 +52,7 @@ lightweight swagger-ui crud-api backed by mongodb
 instruction
     1. save this script as example.js
     2. run the shell command:
-          $ npm install swagger-mongodb && \
+          $ npm install kz-noon && \
               npm_config_server_port=1337 node example.js
     3. open a browser to http://localhost:1337
     4. interact with the swagger-ui crud-api
@@ -78,7 +78,7 @@ instruction
         local.global = global;
         local.modeJs = 'node';
         try {
-            local.swmg = require('swagger-mongodb');
+            local.swmg = require('kz-noon');
         } catch (errorCaught) {
             local.swmg = require('./index.js');
         }
@@ -135,7 +135,7 @@ width="100%" \
 ></iframe>\n' +
 '    <script src="/assets/utility2.js"></script>\n' +
 '    <script src="/assets/swagger-ui.rollup.js"></script>\n' +
-'    <script src="/assets/swagger-mongodb.js"></script>\n' +
+'    <script src="/assets/kz-noon.js"></script>\n' +
 '    <script src="/test/test.js"></script>\n' +
 '    <script>\n' +
 '    window.utility2 = window.utility2 || {};\n' +
@@ -169,12 +169,12 @@ width="100%" \
             local.utility2.istanbul_lite.instrumentInPackage(
                 local.fs.readFileSync(local.swmg.__dirname + '/test.js', 'utf8'),
                 local.swmg.__dirname + '/test.js',
-                'swagger-mongodb'
+                'kz-noon'
             );
         // init mongodb-client
         local.utility2.onReady.counter += 1;
         local.utility2.taskRunOrSubscribe({
-            key: 'swagger-mongodb.mongodbConnect',
+            key: 'kz-noon.mongodbConnect',
             onTask: function (onError) {
                 local.mongodb.MongoClient.connect(
                     local.utility2.envDict.npm_config_mongodb_url ||
@@ -386,7 +386,7 @@ width="100%" \
                     } }
                 }
             }, 4);
-            // transform petstore-api to swagger-mongodb's crud-api
+            // transform petstore-api to kz-noon's crud-api
             Object.keys(options.paths).forEach(function (path) {
                 Object.keys(options.paths[path]).forEach(function (method) {
                     methodPath = options.paths[path][method];
@@ -594,10 +594,10 @@ width="100%" \
 ```
 
 #### output from shell
-[![screen-capture](https://kaizhu256.github.io/node-swagger-mongodb/build/screen-capture.testExampleJs.png)](https://travis-ci.org/kaizhu256/node-swagger-mongodb)
+[![screen-capture](https://kaizhu256.github.io/node-kz-noon/build/screen-capture.testExampleJs.png)](https://travis-ci.org/kaizhu256/node-kz-noon)
 
 #### output from phantomjs-lite
-[![screen-capture](https://kaizhu256.github.io/node-swagger-mongodb/build/screen-capture.testExampleJs.slimerjs..png)](https://hrku01-swagger-mongodb-beta.herokuapp.com)
+[![screen-capture](https://kaizhu256.github.io/node-kz-noon/build/screen-capture.testExampleJs.slimerjs..png)](https://hrku01-kz-noon-beta.herokuapp.com)
 
 
 
@@ -609,7 +609,7 @@ width="100%" \
 
 
 # package-listing
-[![screen-capture](https://kaizhu256.github.io/node-swagger-mongodb/build/screen-capture.gitLsTree.png)](https://github.com/kaizhu256/node-swagger-mongodb)
+[![screen-capture](https://kaizhu256.github.io/node-kz-noon/build/screen-capture.gitLsTree.png)](https://github.com/kaizhu256/node-kz-noon)
 
 
 
@@ -617,7 +617,7 @@ width="100%" \
 ```json
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "bin": { "swagger-mongodb": "index.js" },
+    "bin": { "kz-noon": "index.js" },
     "dependencies": {
         "mongodb-minimal": "^2015.6.3",
         "swagger-ui-lite": "^2015.6.1",
@@ -637,11 +637,11 @@ width="100%" \
         "web"
     ],
     "license": "MIT",
-    "name": "swagger-mongodb",
+    "name": "kz-noon",
     "os": ["darwin", "linux"],
     "repository" : {
         "type" : "git",
-        "url" : "https://github.com/kaizhu256/node-swagger-mongodb.git"
+        "url" : "https://github.com/kaizhu256/node-kz-noon.git"
     },
     "scripts": {
         "build-ci": "node_modules/.bin/utility2 shRun shReadmeBuild",
@@ -676,7 +676,7 @@ node_modules/.bin/utility2 test test.js"
 
 
 # changelog of last 50 commits
-[![screen-capture](https://kaizhu256.github.io/node-swagger-mongodb/build/screen-capture.gitLog.png)](https://github.com/kaizhu256/node-swagger-mongodb/commits)
+[![screen-capture](https://kaizhu256.github.io/node-kz-noon/build/screen-capture.gitLog.png)](https://github.com/kaizhu256/node-kz-noon/commits)
 
 
 
