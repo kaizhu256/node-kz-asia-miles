@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-kz-asia-miles/index.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../base.css">
+    <style type="text/css">
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">node-kz-asia-miles/index.js</span></h1>
+    <h2>
+        
+        Statements: <span class="metric">85% <small>(34 / 40)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Branches: <span class="metric">52.63% <small>(10 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Functions: <span class="metric">100% <small>(7 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Lines: <span class="metric">85% <small>(34 / 40)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">node-kz-asia-miles/</a> &#187; index.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*jslint
+    bitwise: true,
+    browser: true,
+    maxerr: 8,
+    maxlen: 96,
+    node: true,
+    nomen: true,
+    regexp: true,
+    stupid: true
+*/
+(function (local) {
+    'use strict';
+&nbsp;
+&nbsp;
+&nbsp;
+    // run shared js-env code
+    (function () {
+        return;
+    }());
+    switch (local.modeJs) {
+&nbsp;
+&nbsp;
+&nbsp;
+    // run node js-env code
+    case 'node':
+        break;
+    }
+    switch (local.modeJs) {
+&nbsp;
+&nbsp;
+&nbsp;
+    // run browser js-env code
+<span class="branch-0 cbranch-no" title="branch not covered" >    case 'browser':</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+    // run node js-env code
+    case 'node':
+        // export app
+        module.exports = local;
+        module.exports.__dirname = __dirname;
+        // require modules
+        local.fs = require('fs');
+        local.path = require('path');
+        local.url = require('url');
+        // init assets
+        local.utility2.cacheDict.assets['/assets/app.js'] =
+            local.utility2.istanbul_lite.instrumentInPackage(
+                local.fs.readFileSync(__filename, 'utf8'),
+                __filename,
+                'app.js'
+            );
+        local.utility2.cacheDict.assets['/test/test.js'] =
+            local.utility2.istanbul_lite.instrumentInPackage(
+                local.fs.readFileSync('test.js', 'utf8'),
+                __filename,
+                'test.js'
+            );
+        // init custom api
+        local.swmg.apiUpdate({
+            definitions: {
+                // init TestCrudModel schema
+                TestCrudModel: {
+                    // drop collection on init
+                    _collectionDrop: true,
+                    _collectionName: 'SwmgTestCrud',
+                    // init default crud-api
+                    _crudApi: '_test',
+                    _crudApiList: [
+                        'crudAggregateMany',
+                        'crudCountByQueryOne',
+                        'crudCreateMany',
+                        'crudCreateOne',
+                        'crudDeleteByQueryMany',
+                        'crudDeleteByIdOne',
+                        'crudExistsByIdOne',
+                        'crudGetByIdOne',
+                        'crudGetByQueryMany',
+                        'crudGetDistinctValueByPropertyMany',
+                        'crudReplaceMany',
+                        'crudReplaceOne',
+                        'crudUpdateOne'
+                    ],
+                    properties: {
+                        propArray: { items: {}, type: 'array' },
+                        propArraySubdoc: {
+                            default: [{ propRequired: true }],
+                            items: { $ref: '#/definitions/TestCrudModel' },
+                            type: 'array'
+                        },
+                        propBoolean: { type: 'boolean' },
+                        propInteger: { type: 'integer' },
+                        propIntegerInt32: { format: 'int32', type: 'integer' },
+                        propIntegerInt64: { format: 'int64', type: 'integer' },
+                        propNumber: { type: 'number' },
+                        propNumberDouble: { format: 'double', type: 'number' },
+                        propNumberFloat: { format: 'float', type: 'number' },
+                        propObject: { type: 'object' },
+                        propObjectSubdoc: { $ref: '#/definitions/TestNullModel' },
+                        propRequired: { default: true },
+                        propString: { type: 'string' },
+                        propStringByte: { format: 'byte', type: 'string' },
+                        propStringDate: { format: 'date', type: 'string' },
+                        propStringDatetime: { format: 'date-time', type: 'string' },
+                        propStringEmail:
+                            { default: 'a@a.com', format: 'email', type: 'string' },
+                        propStringJson:
+                            { default: 'null', format: 'json', type: 'string' },
+                        propUndefined: {}
+                    },
+                    required: ['propRequired'],
+                    'x-inheritList': [{ $ref: '#/definitions/JsonapiResource' }]
+                },
+                // init TestNullModel schema
+                TestNullModel: {}
+            },
+            paths: {
+                // test custom api handling-behavior
+                '/_test/echo': { post: {
+                    _collectionName: 'SwmgTestCrud',
+                    operationId: 'echo',
+                    parameters: [{
+                        // test array-csv-param handling-behavior
+                        collectionFormat: 'csv',
+                        description: 'csv-array param',
+                        in: 'query',
+                        items: { type: 'string' },
+                        name: 'paramArrayCsv',
+                        type: 'array'
+                    }, {
+                        // test array-pipes-param handling-behavior
+                        collectionFormat: 'pipes',
+                        description: 'pipes-array param',
+                        in: 'query',
+                        items: { type: 'string' },
+                        name: 'paramArrayPipes',
+                        type: 'array'
+                    }, {
+                        // test array-ssv-param handling-behavior
+                        collectionFormat: 'ssv',
+                        description: 'ssv-array param',
+                        in: 'query',
+                        items: { type: 'string' },
+                        name: 'paramArraySsv',
+                        type: 'array'
+                    }, {
+                        // test array-tsv-param handling-behavior
+                        collectionFormat: 'tsv',
+                        description: 'tsv-array param',
+                        in: 'query',
+                        items: { type: 'string' },
+                        name: 'paramArrayTsv',
+                        type: 'array'
+                    }, {
+                        description: 'body',
+                        // test body-param handling-behavior
+                        in: 'body',
+                        name: 'paramBody',
+                        schema: { $ref: '#/definitions/Undefined' }
+                    }, {
+                        description: 'header param',
+                        // test header-param handling-behavior
+                        in: 'header',
+                        name: 'paramHeader',
+                        type: 'string'
+                    }, {
+                        description: 'optional param',
+                        in: 'query',
+                        // test optional-param handling-behavior
+                        name: 'paramOptional',
+                        type: 'string'
+                    }],
+                    summary: 'echo request params back to client',
+                    tags: ['_test']
+                } },
+                // test midddleware-error handling-behavior
+                '/_test/errorMiddleware': { get: {
+                    operationId: 'errorMiddleware',
+                    tags: ['_test']
+                } },
+                // test undefined api handling-behavior
+                '/_test/errorUndefinedApi': { get: {
+                    operationId: 'errorUndefinedApi',
+                    tags: ['_test']
+                } },
+                // test undefined crud-api handling-behavior
+                '/_test/errorUndefinedCrud': { get: {
+                    _collectionName: 'SwmgTestCrud',
+                    _crudApi: true,
+                    operationId: 'errorUndefinedCrud',
+                    tags: ['_test']
+                } }
+            },
+            _tagDict: { _test: { description: 'internal test-api' } }
+        });
+        // init test-middleware
+        local.middleware.middlewareList.push(function (request, response, nextMiddleware) {
+            switch (request.swmgPathname) {
+<span class="branch-0 cbranch-no" title="branch not covered" >            case 'POST /_test/echo':</span>
+<span class="cstat-no" title="statement not covered" >                response.end(JSON.stringify(request.swmgParamDict));</span>
+<span class="cstat-no" title="statement not covered" >                break;</span>
+<span class="branch-1 cbranch-no" title="branch not covered" >            case 'GET /_test/errorMiddleware':</span>
+<span class="cstat-no" title="statement not covered" >                nextMiddleware(new Error('dummy error'));</span>
+<span class="cstat-no" title="statement not covered" >                break;</span>
+            default:
+                nextMiddleware();
+            }
+        });
+        break;
+    }
+}((function () {
+    'use strict';
+    var local;
+&nbsp;
+&nbsp;
+&nbsp;
+    // run shared js-env code
+    (function () {
+        // init local
+        local = {};
+        local.modeJs = (function () {
+            try {
+                return module.exports &amp;&amp;
+                    typeof process.versions.node === 'string' &amp;&amp;
+                    typeof require('http').createServer === 'function' &amp;&amp;
+                    'node';
+            } catch (errorCaughtNode) {
+<span class="cstat-no" title="statement not covered" >                return typeof navigator.userAgent === 'string' &amp;&amp;</span>
+                    typeof document.querySelector('body') === 'object' &amp;&amp;
+                    'browser';
+            }
+        }());
+        // init example.js
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (local.modeJs === 'node') {
+            require('fs').writeFileSync(
+                './example.js',
+                require('fs').readFileSync('./README.md', 'utf8')
+                    // support syntax-highlighting
+                    .replace((/[\S\s]+?\n.*?example.js\s*?```\w*?\n/), function (match0) {
+                        // preserve lineno
+                        return match0.replace((/.+/g), '');
+                    })
+                    .replace((/\n```[\S\s]+/), '')
+            );
+            // init example.js
+            local = require('./example.js');
+        }
+        // init global
+        local.global = local.modeJs === 'browser'
+            ? <span class="branch-0 cbranch-no" title="branch not covered" >window</span>
+            : global;
+        // init swmg
+        local.swmg = local.modeJs === 'browser'
+            ? <span class="branch-0 cbranch-no" title="branch not covered" >window.swmg</span>
+            : require('swagger-mongodb');
+        // init utility2
+        local.utility2 = local.swmg.local.utility2;
+        // init app
+        local.app = { local: local };
+        // export local
+        local.global.local = local;
+    }());
+    return local;
+}())));
+&nbsp;</pre></td></tr>
+</table></pre>
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jul 28 2015 05:46:15 GMT+0000 (UTC)</div>
+</div>
+</body>
+</html>
