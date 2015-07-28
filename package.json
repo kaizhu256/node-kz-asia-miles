@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "bin": { "kz-noon": "index.js" },
+    "bin": { "kz-asiamiles": "index.js" },
     "dependencies": {
         "swagger-mongodb": "~2015.7.12",
         "utility2": "~2015.7.9"
@@ -19,11 +19,11 @@
         "web"
     ],
     "license": "MIT",
-    "name": "kz-noon",
+    "name": "kz-asiamiles",
     "os": ["darwin", "linux"],
     "repository" : {
         "type" : "git",
-        "url" : "https://github.com/kaizhu256/node-kz-noon.git"
+        "url" : "https://github.com/kaizhu256/node-kz-asiamiles.git"
     },
     "scripts": {
         "build-ci": "node_modules/.bin/utility2 shRun shReadmeBuild",

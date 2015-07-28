@@ -1,24 +1,24 @@
-kz-noon
+kz-asiamiles
 ===============
 lightweight swagger-ui crud-api backed by mongodb
 
 
 
 # live test-server
-[![heroku.com test-server](https://kaizhu256.github.io/node-kz-noon/build/screen-capture.herokuDeploy.slimerjs..png)](https://hrku01-kz-noon-beta.herokuapp.com)
+[![heroku.com test-server](https://kaizhu256.github.io/node-kz-asiamiles/build/screen-capture.herokuDeploy.slimerjs..png)](https://hrku01-kz-asiamiles-beta.herokuapp.com)
 
 
 
-# build-status [![travis-ci.org build-status](https://api.travis-ci.org/kaizhu256/node-kz-noon.svg)](https://travis-ci.org/kaizhu256/node-kz-noon)
+# build-status [![travis-ci.org build-status](https://api.travis-ci.org/kaizhu256/node-kz-asiamiles.svg)](https://travis-ci.org/kaizhu256/node-kz-asiamiles)
 
-[![build commit status](https://kaizhu256.github.io/node-kz-noon/build/build.badge.svg)](https://travis-ci.org/kaizhu256/node-kz-noon)
+[![build commit status](https://kaizhu256.github.io/node-kz-asiamiles/build/build.badge.svg)](https://travis-ci.org/kaizhu256/node-kz-asiamiles)
 
-| git-branch : | [master](https://github.com/kaizhu256/node-kz-noon/tree/master) | [beta](https://github.com/kaizhu256/node-kz-noon/tree/beta) | [alpha](https://github.com/kaizhu256/node-kz-noon/tree/alpha)|
+| git-branch : | [master](https://github.com/kaizhu256/node-kz-asiamiles/tree/master) | [beta](https://github.com/kaizhu256/node-kz-asiamiles/tree/beta) | [alpha](https://github.com/kaizhu256/node-kz-asiamiles/tree/alpha)|
 |--:|:--|:--|:--|
-| test-server : | [![heroku.com test-server](https://kaizhu256.github.io/node-kz-noon/heroku-logo.75x25.png)](https://hrku01-kz-noon-master.herokuapp.com) | [![heroku.com test-server](https://kaizhu256.github.io/node-kz-noon/heroku-logo.75x25.png)](https://hrku01-kz-noon-beta.herokuapp.com) | [![heroku.com test-server](https://kaizhu256.github.io/node-kz-noon/heroku-logo.75x25.png)](https://hrku01-kz-noon-alpha.herokuapp.com)|
-| test-report : | [![test-report](https://kaizhu256.github.io/node-kz-noon/build..master..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..master..travis-ci.org/test-report.html) | [![test-report](https://kaizhu256.github.io/node-kz-noon/build..beta..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..beta..travis-ci.org/test-report.html) | [![test-report](https://kaizhu256.github.io/node-kz-noon/build..alpha..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..alpha..travis-ci.org/test-report.html)|
-| coverage : | [![istanbul-lite coverage](https://kaizhu256.github.io/node-kz-noon/build..master..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..master..travis-ci.org/coverage.html/index.html) | [![istanbul-lite coverage](https://kaizhu256.github.io/node-kz-noon/build..beta..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..beta..travis-ci.org/coverage.html/index.html) | [![istanbul-lite coverage](https://kaizhu256.github.io/node-kz-noon/build..alpha..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-kz-noon/build..alpha..travis-ci.org/coverage.html/index.html)|
-| build-artifacts : | [![build-artifacts](https://kaizhu256.github.io/node-kz-noon/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-kz-noon/tree/gh-pages/build..master..travis-ci.org) | [![build-artifacts](https://kaizhu256.github.io/node-kz-noon/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-kz-noon/tree/gh-pages/build..beta..travis-ci.org) | [![build-artifacts](https://kaizhu256.github.io/node-kz-noon/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-kz-noon/tree/gh-pages/build..alpha..travis-ci.org)|
+| test-server : | [![heroku.com test-server](https://kaizhu256.github.io/node-kz-asiamiles/heroku-logo.75x25.png)](https://hrku01-kz-asiamiles-master.herokuapp.com) | [![heroku.com test-server](https://kaizhu256.github.io/node-kz-asiamiles/heroku-logo.75x25.png)](https://hrku01-kz-asiamiles-beta.herokuapp.com) | [![heroku.com test-server](https://kaizhu256.github.io/node-kz-asiamiles/heroku-logo.75x25.png)](https://hrku01-kz-asiamiles-alpha.herokuapp.com)|
+| test-report : | [![test-report](https://kaizhu256.github.io/node-kz-asiamiles/build..master..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-kz-asiamiles/build..master..travis-ci.org/test-report.html) | [![test-report](https://kaizhu256.github.io/node-kz-asiamiles/build..beta..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-kz-asiamiles/build..beta..travis-ci.org/test-report.html) | [![test-report](https://kaizhu256.github.io/node-kz-asiamiles/build..alpha..travis-ci.org/test-report.badge.svg)](https://kaizhu256.github.io/node-kz-asiamiles/build..alpha..travis-ci.org/test-report.html)|
+| coverage : | [![istanbul-lite coverage](https://kaizhu256.github.io/node-kz-asiamiles/build..master..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-kz-asiamiles/build..master..travis-ci.org/coverage.html/index.html) | [![istanbul-lite coverage](https://kaizhu256.github.io/node-kz-asiamiles/build..beta..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-kz-asiamiles/build..beta..travis-ci.org/coverage.html/index.html) | [![istanbul-lite coverage](https://kaizhu256.github.io/node-kz-asiamiles/build..alpha..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-kz-asiamiles/build..alpha..travis-ci.org/coverage.html/index.html)|
+| build-artifacts : | [![build-artifacts](https://kaizhu256.github.io/node-kz-asiamiles/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-kz-asiamiles/tree/gh-pages/build..master..travis-ci.org) | [![build-artifacts](https://kaizhu256.github.io/node-kz-asiamiles/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-kz-asiamiles/tree/gh-pages/build..beta..travis-ci.org) | [![build-artifacts](https://kaizhu256.github.io/node-kz-asiamiles/glyphicons_144_folder_open.png)](https://github.com/kaizhu256/node-kz-asiamiles/tree/gh-pages/build..alpha..travis-ci.org)|
 
 #### master branch
 - stable branch
@@ -590,10 +590,10 @@ width="100%" \
 ```
 
 #### output from shell
-[![screen-capture](https://kaizhu256.github.io/node-kz-noon/build/screen-capture.testExampleJs.png)](https://travis-ci.org/kaizhu256/node-kz-noon)
+[![screen-capture](https://kaizhu256.github.io/node-kz-asiamiles/build/screen-capture.testExampleJs.png)](https://travis-ci.org/kaizhu256/node-kz-asiamiles)
 
 #### output from phantomjs-lite
-[![screen-capture](https://kaizhu256.github.io/node-kz-noon/build/screen-capture.testExampleJs.slimerjs..png)](https://hrku01-kz-noon-beta.herokuapp.com)
+[![screen-capture](https://kaizhu256.github.io/node-kz-asiamiles/build/screen-capture.testExampleJs.slimerjs..png)](https://hrku01-kz-asiamiles-beta.herokuapp.com)
 
 
 
@@ -603,7 +603,7 @@ width="100%" \
 
 
 # package-listing
-[![screen-capture](https://kaizhu256.github.io/node-kz-noon/build/screen-capture.gitLsTree.png)](https://github.com/kaizhu256/node-kz-noon)
+[![screen-capture](https://kaizhu256.github.io/node-kz-asiamiles/build/screen-capture.gitLsTree.png)](https://github.com/kaizhu256/node-kz-asiamiles)
 
 
 
@@ -611,7 +611,7 @@ width="100%" \
 ```json
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "bin": { "kz-noon": "index.js" },
+    "bin": { "kz-asiamiles": "index.js" },
     "dependencies": {
         "swagger-mongodb": "~2015.7.12",
         "utility2": "~2015.7.9"
@@ -630,11 +630,11 @@ width="100%" \
         "web"
     ],
     "license": "MIT",
-    "name": "kz-noon",
+    "name": "kz-asiamiles",
     "os": ["darwin", "linux"],
     "repository" : {
         "type" : "git",
-        "url" : "https://github.com/kaizhu256/node-kz-noon.git"
+        "url" : "https://github.com/kaizhu256/node-kz-asiamiles.git"
     },
     "scripts": {
         "build-ci": "node_modules/.bin/utility2 shRun shReadmeBuild",
@@ -654,14 +654,13 @@ node_modules/.bin/utility2 test test.js"
 
 
 
-# change since ed1c286b
-- successfully build and deploy from travis-ci to heroku
-- export local.app
+# change since 08380195
+- rename project to kz-asiamiles
 - none
 
 
 
-# changelog of last 50 commits
+[![screen-capture](https://kaizhu256.github.io/node-kz-asiamiles/build/screen-capture.gitLog.png)](https://github.com/kaizhu256/node-kz-asiamiles/commits)
 [![screen-capture](https://kaizhu256.github.io/node-kz-noon/build/screen-capture.gitLog.png)](https://github.com/kaizhu256/node-kz-noon/commits)
 
 
