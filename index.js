@@ -38,7 +38,7 @@
     // run node js-env code
     case 'node':
         // export app
-        module.exports = local.app;
+        module.exports = local;
         module.exports.__dirname = __dirname;
         // require modules
         local.fs = require('fs');
@@ -57,6 +57,156 @@
                 __filename,
                 'test.js'
             );
+        // init custom api
+        local.swmg.apiUpdate({
+            definitions: {
+                // init TestCrudModel schema
+                TestCrudModel: {
+                    // drop collection on init
+                    _collectionDrop: true,
+                    _collectionName: 'SwmgTestCrud',
+                    // init default crud-api
+                    _crudApi: '_test',
+                    _crudApiList: [
+                        'crudAggregateMany',
+                        'crudCountByQueryOne',
+                        'crudCreateMany',
+                        'crudCreateOne',
+                        'crudDeleteByQueryMany',
+                        'crudDeleteByIdOne',
+                        'crudExistsByIdOne',
+                        'crudGetByIdOne',
+                        'crudGetByQueryMany',
+                        'crudGetDistinctValueByPropertyMany',
+                        'crudReplaceMany',
+                        'crudReplaceOne',
+                        'crudUpdateOne'
+                    ],
+                    properties: {
+                        propArray: { items: {}, type: 'array' },
+                        propArraySubdoc: {
+                            default: [{ propRequired: true }],
+                            items: { $ref: '#/definitions/TestCrudModel' },
+                            type: 'array'
+                        },
+                        propBoolean: { type: 'boolean' },
+                        propInteger: { type: 'integer' },
+                        propIntegerInt32: { format: 'int32', type: 'integer' },
+                        propIntegerInt64: { format: 'int64', type: 'integer' },
+                        propNumber: { type: 'number' },
+                        propNumberDouble: { format: 'double', type: 'number' },
+                        propNumberFloat: { format: 'float', type: 'number' },
+                        propObject: { type: 'object' },
+                        propObjectSubdoc: { $ref: '#/definitions/TestNullModel' },
+                        propRequired: { default: true },
+                        propString: { type: 'string' },
+                        propStringByte: { format: 'byte', type: 'string' },
+                        propStringDate: { format: 'date', type: 'string' },
+                        propStringDatetime: { format: 'date-time', type: 'string' },
+                        propStringEmail:
+                            { default: 'a@a.com', format: 'email', type: 'string' },
+                        propStringJson:
+                            { default: 'null', format: 'json', type: 'string' },
+                        propUndefined: {}
+                    },
+                    required: ['propRequired'],
+                    'x-inheritList': [{ $ref: '#/definitions/JsonapiResource' }]
+                },
+                // init TestNullModel schema
+                TestNullModel: {}
+            },
+            paths: {
+                // test custom api handling-behavior
+                '/_test/echo': { post: {
+                    _collectionName: 'SwmgTestCrud',
+                    operationId: 'echo',
+                    parameters: [{
+                        // test array-csv-param handling-behavior
+                        collectionFormat: 'csv',
+                        description: 'csv-array param',
+                        in: 'query',
+                        items: { type: 'string' },
+                        name: 'paramArrayCsv',
+                        type: 'array'
+                    }, {
+                        // test array-pipes-param handling-behavior
+                        collectionFormat: 'pipes',
+                        description: 'pipes-array param',
+                        in: 'query',
+                        items: { type: 'string' },
+                        name: 'paramArrayPipes',
+                        type: 'array'
+                    }, {
+                        // test array-ssv-param handling-behavior
+                        collectionFormat: 'ssv',
+                        description: 'ssv-array param',
+                        in: 'query',
+                        items: { type: 'string' },
+                        name: 'paramArraySsv',
+                        type: 'array'
+                    }, {
+                        // test array-tsv-param handling-behavior
+                        collectionFormat: 'tsv',
+                        description: 'tsv-array param',
+                        in: 'query',
+                        items: { type: 'string' },
+                        name: 'paramArrayTsv',
+                        type: 'array'
+                    }, {
+                        description: 'body',
+                        // test body-param handling-behavior
+                        in: 'body',
+                        name: 'paramBody',
+                        schema: { $ref: '#/definitions/Undefined' }
+                    }, {
+                        description: 'header param',
+                        // test header-param handling-behavior
+                        in: 'header',
+                        name: 'paramHeader',
+                        type: 'string'
+                    }, {
+                        description: 'optional param',
+                        in: 'query',
+                        // test optional-param handling-behavior
+                        name: 'paramOptional',
+                        type: 'string'
+                    }],
+                    summary: 'echo request params back to client',
+                    tags: ['_test']
+                } },
+                // test midddleware-error handling-behavior
+                '/_test/errorMiddleware': { get: {
+                    operationId: 'errorMiddleware',
+                    tags: ['_test']
+                } },
+                // test undefined api handling-behavior
+                '/_test/errorUndefinedApi': { get: {
+                    operationId: 'errorUndefinedApi',
+                    tags: ['_test']
+                } },
+                // test undefined crud-api handling-behavior
+                '/_test/errorUndefinedCrud': { get: {
+                    _collectionName: 'SwmgTestCrud',
+                    _crudApi: true,
+                    operationId: 'errorUndefinedCrud',
+                    tags: ['_test']
+                } }
+            },
+            _tagDict: { _test: { description: 'internal test-api' } }
+        });
+        // init test-middleware
+        local.middleware.middlewareList.push(function (request, response, nextMiddleware) {
+            switch (request.swmgPathname) {
+            case 'POST /_test/echo':
+                response.end(JSON.stringify(request.swmgParamDict));
+                break;
+            case 'GET /_test/errorMiddleware':
+                nextMiddleware(new Error('dummy error'));
+                break;
+            default:
+                nextMiddleware();
+            }
+        });
         break;
     }
 }((function () {
