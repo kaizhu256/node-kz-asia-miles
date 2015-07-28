@@ -692,7 +692,10 @@ shBuild() {
     [ "$(node --version)" \< "v0.12" ] && return
 
     # deploy app to heroku
-    shRun shHerokuDeploy hrku01-$npm_package_name-$CI_BRANCH || return $?
+    if [ "$CI_NAME" = "codeship" ]
+    then
+        shRun shHerokuDeploy hrku01-$npm_package_name-$CI_BRANCH || return $?
+    fi
 
     # test deployed app to heroku
     if [ "$CI_BRANCH" = alpha ] ||
@@ -730,7 +733,10 @@ shBuildGithubUploadCleanup() {
 
 # upload build-artifacts to github,
 # and if number of commits > 16, then squash older commits
-COMMIT_LIMIT=16 shBuildGithubUpload || exit $?
+if [ "$CI_NAME" = "codeship" ]
+then
+    COMMIT_LIMIT=16 shBuildGithubUpload || exit $?
+fi
 
 # exit with $EXIT_CODE
 exit $EXIT_CODE
