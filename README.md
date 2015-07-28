@@ -2,8 +2,6 @@ kz-noon
 ===============
 lightweight swagger-ui crud-api backed by mongodb
 
-[![NPM](https://img.shields.io/npm/v/kz-noon.svg?style=flat-square)](https://www.npmjs.org/package/kz-noon)
-
 
 
 # live test-server
@@ -52,7 +50,7 @@ lightweight swagger-ui crud-api backed by mongodb
 instruction
     1. save this script as example.js
     2. run the shell command:
-          $ npm install kz-noon && \
+          $ npm install swagger-mongodb && \
               npm_config_server_port=1337 node example.js
     3. open a browser to http://localhost:1337
     4. interact with the swagger-ui crud-api
@@ -77,11 +75,7 @@ instruction
         local = {};
         local.global = global;
         local.modeJs = 'node';
-        try {
-            local.swmg = require('kz-noon');
-        } catch (errorCaught) {
-            local.swmg = require('./index.js');
-        }
+        local.swmg = require('swagger-mongodb');
         local.utility2 = local.swmg.local.utility2;
         // init onReady
         local.utility2.onReadyInit();
@@ -135,7 +129,8 @@ width="100%" \
 ></iframe>\n' +
 '    <script src="/assets/utility2.js"></script>\n' +
 '    <script src="/assets/swagger-ui.rollup.js"></script>\n' +
-'    <script src="/assets/kz-noon.js"></script>\n' +
+'    <script src="/assets/swagger-mongodb.js"></script>\n' +
+'    <script src="/assets/app.js"></script>\n' +
 '    <script src="/test/test.js"></script>\n' +
 '    <script>\n' +
 '    window.utility2 = window.utility2 || {};\n' +
@@ -165,16 +160,17 @@ width="100%" \
             { envDict: local.utility2.envDict },
             ''
         );
+        local.utility2.cacheDict.assets['/assets/app.js'] = 'null';
         local.utility2.cacheDict.assets['/test/test.js'] =
             local.utility2.istanbul_lite.instrumentInPackage(
                 local.fs.readFileSync(local.swmg.__dirname + '/test.js', 'utf8'),
                 local.swmg.__dirname + '/test.js',
-                'kz-noon'
+                'swagger-mongodb'
             );
         // init mongodb-client
         local.utility2.onReady.counter += 1;
         local.utility2.taskRunOrSubscribe({
-            key: 'kz-noon.mongodbConnect',
+            key: 'swagger-mongodb.mongodbConnect',
             onTask: function (onError) {
                 local.mongodb.MongoClient.connect(
                     local.utility2.envDict.npm_config_mongodb_url ||
@@ -386,7 +382,7 @@ width="100%" \
                     } }
                 }
             }, 4);
-            // transform petstore-api to kz-noon's crud-api
+            // transform petstore-api to swagger-mongodb's crud-api
             Object.keys(options.paths).forEach(function (path) {
                 Object.keys(options.paths[path]).forEach(function (method) {
                     methodPath = options.paths[path][method];
@@ -602,9 +598,7 @@ width="100%" \
 
 
 # npm-dependencies
-- [mongodb-minimal](https://www.npmjs.com/package/mongodb-minimal)
-- [swagger-ui-lite](https://www.npmjs.com/package/swagger-ui-lite)
-- [utility2](https://www.npmjs.com/package/utility2)
+- [swagger-mongodb](https://www.npmjs.com/package/swagger-mongodb)
 
 
 
@@ -619,8 +613,7 @@ width="100%" \
     "author": "kai zhu <kaizhu256@gmail.com>",
     "bin": { "kz-noon": "index.js" },
     "dependencies": {
-        "mongodb-minimal": "^2015.6.3",
-        "swagger-ui-lite": "^2015.6.1",
+        "swagger-mongodb": "~2015.7.12",
         "utility2": "~2015.7.9"
     },
     "description": "lightweight swagger-ui crud-api backed by mongodb",
@@ -650,27 +643,20 @@ node_modules/.bin/utility2 shRun node test.js",
         "test": "node_modules/.bin/utility2 shRun shReadmeExportPackageJson && \
 node_modules/.bin/utility2 test test.js"
     },
-    "version": "2015.7.12"
+    "version": "2015.6.1"
 }
 ```
 
 
 
 # todo
-- add cached param for crudGetByQueryMany
-- add SwmgUserLoginTokenCapped
-- re-enable user login/logout
-- test /user/login and /user/logout
-- add max / min validation
 - none
 
 
 
-# change since 1b2ab0ce
-- npm publish 2015.7.12
-- add crudCreateMany / crudDeleteByQueryMany / crudReplaceMany
-- fix swmg.onErrorJsonapi not passing error.stack
-- remove validation check for swmg.crudUpdateOne, in order to remove require constraint
+# change since ed1c286b
+- successfully build and deploy from travis-ci to heroku
+- export local.app
 - none
 
 
@@ -693,9 +679,6 @@ shBuild() {
     # init env
     export npm_config_mode_slimerjs=1 || return $?
     . node_modules/.bin/utility2 && shInit || return $?
-
-    # run npm-test on published package
-    shRun shNpmTestPublished || return $?
 
     # test example js script
     export npm_config_timeout_exit=10000 || return $?
